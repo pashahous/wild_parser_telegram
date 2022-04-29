@@ -1,0 +1,1 @@
+token='1011302845:AAEzVCosqGqEjPIWxCE2VZDNtBe04Sp9ebw' # telegram bot token
