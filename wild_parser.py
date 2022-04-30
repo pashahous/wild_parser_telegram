@@ -34,6 +34,8 @@ def get_content(html, print_result=False):
     :param print_result: bool - for print result
     :return: dict of params product
     '''
+
+
     # with open('out.txt','w',encoding="utf-8") as f:
     #     f.write(html)
     soup = BeautifulSoup(html, 'html.parser')

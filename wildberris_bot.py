@@ -11,7 +11,7 @@ dp = Dispatcher(bot)
 @dp.message_handler(commands='start')
 async def start(message: types.Message):
     print('start -----',str(message.chat.id))
-    start_buttons = ['Добавить товар', 'Список товаров']
+    start_buttons = ['Добавить товар', 'Список товаров','Получить инфу о товаре']
     keyboard = types.ReplyKeyboardMarkup(resize_keyboard=True)
     keyboard.add(*start_buttons)
     await message.answer('Меню', reply_markup=keyboard)
@@ -26,6 +26,9 @@ async def gen_frazu(message: types.Message):
 async def return_items(message: types.Message):
     await message.answer('Получаю список товаров')
 
+@dp.message_handler(Text(equals='Получить инфу о товаре'))
+async def return_items(message: types.Message):
+    await message.answer('Получаю инфу о товаре')
 
 
 
